@@ -1,0 +1,27 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary">
+  <button mat-icon-button disabled (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span style="margin-left: 1rem;">NickPriv.com</span>
+</mat-toolbar>
+<!-- Content (container) -->
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidenav -->
+  <mat-sidenav #sidenav mode="over" class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">Dashboard</a>
+      <a mat-list-item routerLink="/">Settings</a>
+      <a mat-list-item routerLink="/">About</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+
+    <!-- Page Content -->
+    <div class="main-content">
+      Website under construction!
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
