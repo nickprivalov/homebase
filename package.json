@@ -1,0 +1,15 @@
+{
+  "name": "homebase-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.4.1",
+  "workspaces": ["frontend", "aws"],
+  "scripts": {
+    "frontend:start": "npm run start -w frontend",
+    "frontend:build": "npm run build -w frontend",
+    "frontend:test": "npm run test -w frontend",
+    "aws:bootstrap": "npm run cdk:bootstrap -w aws",
+    "aws:deploy": "npm run cdk:deploy -w aws",
+    "aws:destroy": "npm run cdk:destroy -w aws",
+    "deploy": "npm run frontend:build && npm run aws:deploy"
+  }
+}
